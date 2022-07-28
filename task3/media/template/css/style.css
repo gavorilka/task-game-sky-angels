@@ -1,0 +1,308 @@
+/* css reset start */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* css reset end */
+
+
+
+/* flex start */
+.flex-row {
+    display: flex;
+}
+.flex-sb {
+    justify-content: space-between;
+}
+.flex-ai-e {
+    align-items: flex-end;
+}
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+.flex-aic {
+    align-items: center;
+}
+/* flex end */
+
+
+
+
+/* body and buttons start */
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: #464646;
+    font-family: "Segoe UI";
+}
+.btn {
+    cursor: pointer;
+    background: #ffeccf;
+    border: none;
+    position: relative;
+    overflow: hidden;
+    width: 110px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .5s ease-in;
+    margin-top: 20px;
+    color: #805512;
+    padding-bottom: 2px;
+}
+.btn-ripple {
+    position: absolute;
+    height: 100%;
+    background: #f4fffd;
+}
+.btn:hover {
+    background: #f39c12;
+}
+.btn-ripple-animation {
+    animation: ripple 1 1s forwards;
+}
+@keyframes ripple {
+    0% {
+        opacity: .4;
+        width: 0;
+    }
+    50% {
+        opacity: .4;
+        width: 100%;
+    }
+    100% {
+        opacity: 0;
+        width: 100%;
+    }
+}
+.btn p {
+    z-index: 999;
+    color: black;
+}
+/* body and buttons end */
+
+
+
+/* game start */
+#game {
+    width: 1024px;
+    height: 768px;
+    position: relative;
+    background: #f2ce5f;
+    overflow: hidden;
+}
+/* game end */
+
+
+
+/* panel left start */
+.panel-left {
+    width: 95px;
+    height: 100%;
+    background: #ffffff;
+    padding: 15px 0;
+    justify-content: space-around;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+    z-index: 999;
+    position: relative;
+}
+#timer-count {
+    font-size: 20px;
+}
+#star-count,
+#gasoline-count {
+    position: relative;
+}
+.gasoline-number,
+.star-number {
+    position: absolute;
+    font-size: 21px;
+    font-weight: bold;
+    color: white;
+}
+.gasoline-number {
+    bottom: 12px;
+    left: 13px;
+}
+.star-number {
+    bottom: 15px;
+    left: 22px;
+}
+#timer-count {
+    font-size: 30px;
+    font-weight: bold;
+    color: #f2b452;
+}
+#timer-text {
+    text-align: center;
+    color: #f2b452;
+    font-weight: bold;
+    font-size: 20px;
+    position: relative;
+    top: -8px;
+}
+#font-control {
+    width: 75%;
+}
+/* panel left end */
+
+
+
+/* modal start */
+.modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.59);
+    z-index: 99999;
+}
+.modal-wrap {
+    width: 100%;
+    padding: 0 10%;
+    background: #da9f42;
+    overflow: hidden;
+    animation: modal-show 1 2s forwards;
+}
+.modal-wrap ul {
+    list-style: none;
+    padding-left: 2px;
+    margin-top: 12px;
+}
+.modal-desc {
+    font-size: 21px;
+    margin-bottom: 3px;
+}
+.modal h2 {
+    color: #ffeccf;
+    font-size: 34px;
+    text-shadow: 1px 1px black;
+}
+.modal-text,
+.modal li {
+    color: #fff1db;
+    font-size: 18px;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.35);
+}
+@keyframes modal-show {
+    0%,10% {
+        height: 0;
+    }
+    100% {
+        padding: 30px 10%;
+        height: 400px;
+    }
+}
+/* modal end */
+
+
+
+/*  table raking start  */
+.logo-black {
+    height: 60px;
+}
+.column {
+    color: #fff1db;
+    font-size: 18px;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.35);
+    width: 25%;
+}
+.table {
+    margin-top: 20px;
+}
+.modal-name .modal-wrap,
+.modal-raking .modal-wrap {
+    background: #303030;
+}
+.modal-title-border {
+    border-top: 1px solid #9c9c9c;
+    border-bottom: 1px solid #9c9c9c;
+}
+.table .flex-row:first-child {
+    margin-bottom: 6px;
+}
+.table .flex-row {
+    margin-bottom: 4px;
+}
+.table .flex-row > .column:first-child {
+    width: 10%;
+    margin-left: 15px;
+}
+.table .flex-row > .column:nth-child(2) {
+    width: 70%;
+}
+.table .flex-row > .column:nth-child(3) {
+    width: 10%;
+    text-align: center;
+}
+.table .flex-row > .column:nth-child(4) {
+    width: 10%;
+    text-align: center;
+}
+/*  table raking end  */
+
+
+/* game zone start */
+.element {
+    position: absolute;
+}
+#player {
+    top: 0;
+    left: 0;
+}
+.showPlayer {
+    animation: showPlayer 1 1s;
+}
+.showElement {
+    animation: showElement 1 1s;
+}
+@keyframes showPlayer {
+    0% {
+        transform: translateX(-200px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+@keyframes showElement {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+.star,
+.parachute,
+.bird,
+.cloud {
+    object-fit: contain;
+     position: absolute;
+}
+/* game zone end */
+
+
+.modal-raking,
+.modal-name {
+    display: none;
+}
+.btn-block {
+    background: #4a4a4a;
+    cursor: no-drop;
+}
+
+.panel-left img {
+    opacity: .8;
+    cursor: pointer;
+    transition: all .5s ease-in;
+}
+.panel-left img:hover {
+    opacity: 1;
+}

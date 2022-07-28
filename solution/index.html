@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sky Angle</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- game start -->
+<div id="game">
+
+    <!-- gems rules modal start -->
+    <div class="modal modal-rules">
+        <div class="modal-wrap">
+            <div class="flex-row flex-sb flex-ai-e">
+                <h2>How to Play</h2>
+                <p class="modal-text modal-desc">Flight in Sky Angel Challenge...</p>
+            </div>
+            <ul>
+                <li>1. Move the airplane using the arrows keys;</li>
+                <li>2. The timer present the time lapsed;</li>
+                <li>3. The fuel counter show the remain fuel;</li>
+                <li>4. During the flight, the aircraft need to avoid the birds that are presented in the sky. If the airplane hit a bird, the game is over;</li>
+                <li>5. During the flight, the aircraft need to collect fuel and stars in the sky;</li>
+                <li>6. You can pause the game clicking in a button pause, or pressing the space bar. </li>
+                <li>7. Go beyond all limits;</li>
+            </ul>
+            <div class="btn btn-start">
+                <p>Start Game</p>
+                <div class="btn-ripple"></div>
+            </div>
+        </div>
+    </div>
+    <!-- gems rules modal end -->
+
+
+    <!-- gems rules modal start -->
+    <div class="modal modal-name">
+        <div class="modal-wrap">
+            <div class="modal-title-border flex-row flex-sb flex-aic">
+                <h2>Write your name</h2>
+                <img class="logo-black" src="img/SkyAngel.png" alt="logo">
+            </div>
+            <form action="#">
+                <input type="text" name="name" id="username">
+                <div class="btn btn-continue btn-block">
+                    <p>Continue</p>
+                    <div class="btn-ripple"></div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- gems rules modal end -->
+
+    <!-- gems rules modal start -->
+    <div class="modal modal-raking">
+        <div class="modal-wrap">
+            <div class="modal-title-border flex-row flex-sb flex-aic">
+                <h2>Ranking table</h2>
+                <img class="logo-black" src="img/SkyAngel.png" alt="logo">
+            </div>
+            <div class="table flex-col">
+                <div class="flex-row flex-sb">
+                    <div class="column">#</div>
+                    <div class="column">Name</div>
+                    <div class="column">Stars</div>
+                    <div class="column">Time</div>
+                </div>
+
+            </div>
+            <div class="btn btn-reload">
+                <p>Start Game</p>
+                <div class="btn-ripple"></div>
+            </div>
+        </div>
+    </div>
+    <!-- gems rules modal end -->
+
+
+    <div class="panel-left flex-col flex-aic">
+        <img src="img/logo.png" alt="logo">
+        <div id="gasoline-count">
+            <img src="img/gasoline-coutn.png" alt="gasoline-coutn">
+            <p class="gasoline-number smart-font-size">10</p>
+        </div>
+        <div id="star-count">
+            <img src="img/star-count.png" alt="star-count">
+            <p class="star-number smart-font-size">0</p>
+        </div>
+        <img class="sound-control" src="img/sound.png" alt="sound">
+        <div id="font-control" class="flex-row flex-aic flex-sb">
+            <img class="font-decrease" src="img/minus.png" alt="minus">
+            <img class="font-increase" src="img/plus.png" alt="plus">
+        </div>
+        <div id="timer">
+            <p id="timer-count" class="smart-font-size">0</p>
+            <p id="timer-text">sec</p>
+        </div>
+        <div id="game-control">
+            <img class="pause-el" src="img/pause.png" alt="pause">
+        </div>
+    </div>
+
+
+    <img id="player" class="element" src="img/airplane.png" alt="airline">
+</div>
+<!-- game end -->
+
+<script src="js/jquery-3.2.1.js"></script>
+<script src="js/engine.js"></script>
+</body>
+</html>
